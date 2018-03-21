@@ -1,4 +1,4 @@
-# A bug in Molinillo.
+# A bug in Bundler / Molinillo.
 
 If you run `bundle install`, you'll see the following list of errors:
 
