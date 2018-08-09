@@ -30,5 +30,3 @@ with both `bundler-test` and `dependency`.
 But the error message remains. I encountered an error like this while trying to upgrade a large, commercial
 project from Rails 4.x to Rails 5. It confused me, and there was nothing about it on Google or Stack Overflow
 (and when I posted my own question, nobody answered). So I debugged it myself until I found the cause (roughly).
-
-I might even have a fix for this problem.
