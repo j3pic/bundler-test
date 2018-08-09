@@ -23,9 +23,11 @@ Bundler will not be able to find any compatible versions.
 
 But the second error is spurious: Bundler did find a compatible version of librato-metrics. But
 the error shows up because during the resolution process, the Molinillo library considered a
-group of `librato-metrics` versions in the 2.x series, and rejected all of them. But then it
+group of `librato-metrics` versions in the 2.x series, and rejected all of them (and stored the error
+message in a data structure that is later used to generate the list of errors). But then it
 considered another group of `librato-metrics` versions and found that version 1.5.0 is compatible
-with both `bundler-test` and `dependency`.
+with both `bundler-test` and `dependency` (but it doesn't remove the error from the data structure because
+that same data is used by for other purposes).
 
 But the error message remains. I encountered an error like this while trying to upgrade a large, commercial
 project from Rails 4.x to Rails 5. It confused me, and there was nothing about it on Google or Stack Overflow
